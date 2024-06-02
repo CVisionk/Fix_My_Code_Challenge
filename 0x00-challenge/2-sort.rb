@@ -16,11 +16,15 @@ ARGV.each do |arg|
     is_inserted = false
     i = 0
     l = result.size
+    #index = 0
     while !is_inserted && i < l do
-        if result[i] < i_arg
+        #test = "result: " + result[i].to_s + "     i: " +i.to_s + "    ith: " + i_arg.to_s + "  " + result.to_s+"\nIteration: " + index.to_s
+        #index += 1 
+        #puts test
+        if result[i] <= i_arg
             i += 1
         else
-            result.insert(i - 1, i_arg)
+            result.insert(i, i_arg)
             is_inserted = true
             break
         end
